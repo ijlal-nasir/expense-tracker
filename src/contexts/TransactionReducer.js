@@ -2,10 +2,16 @@
 export default (state, action) => {
 
     switch (action.type) {
-        case 'increment':
-            return {count: state.count + 1};
-        case 'decrement':
-            return {count: state.count - 1};
+        case 'DELETE_TRANSACTION':
+            return {
+                ...state,
+                transactions: state.transactions.filter( tran => tran.id != action.payload )
+            };
+        case 'ADD_TRANSACTION':
+            return {
+                ...state,
+                transactions: state.transactions.concat( action.payload )
+            };
         default:
             return state;
     }
