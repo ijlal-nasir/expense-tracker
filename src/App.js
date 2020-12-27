@@ -1,11 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import AccountSummary from './components/AccountSummary';
+import AddNewTransaction from './components/AddNewTransaction';
+import Balance from './components/Balance';
+import Header from './components/Header';
+import TransactionHistory from './components/TransactionHistory';
 
 function App() {
 	return (
-		<div className="App">
-			<h1>Hello, world from surge.sh!</h1>
+		<div>
+			<Header />
+			<div className="container">
+				<Balance />
+				<AccountSummary />
+				<TransactionHistory />
+				<AddNewTransaction />
+			</div>
+			
 		</div>
+		
 	);
 }
 
