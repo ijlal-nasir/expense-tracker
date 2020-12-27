@@ -54,7 +54,7 @@ jobs:
         run: |
           echo "Deploying to surge..."
           surge ./build ret.surge.sh --token ${{ secrets.SURGE_TOKEN }}
-          echo "Congratulations! Your app is deployed, visit your app ${{ secrets.SURGE_DOMAIN }}
+          echo "Congratulations! Your app is deployed, visit your app http://ret.surge.sh/"
 
 
 
