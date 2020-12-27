@@ -4,10 +4,11 @@ import AddNewTransaction from './components/AddNewTransaction';
 import Balance from './components/Balance';
 import Header from './components/Header';
 import TransactionHistory from './components/TransactionHistory';
+import { TransactionProvider } from './contexts/TransactionContext';
 
 function App() {
 	return (
-		<div>
+		<TransactionProvider>
 			<Header />
 			<div className="container">
 				<Balance />
@@ -16,7 +17,7 @@ function App() {
 				<AddNewTransaction />
 			</div>
 			
-		</div>
+		</TransactionProvider>
 		
 	);
 }
