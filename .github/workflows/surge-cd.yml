@@ -42,6 +42,8 @@ jobs:
         run: |
           echo "Creating a production build using Yarn (yarn build...)"
           yarn build
+          env: 
+            CI: false
       
       - name: Install Surge
         run: |
